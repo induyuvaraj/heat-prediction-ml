@@ -1,0 +1,44 @@
+1. Programming Language
+Python 3.x
+
+Used for:
+         Data processing
+         Machine learning
+         Running the application
+
+2. IDE 
+Visual Studio Code  
+
+Used to:
+        Write and run code
+
+3. Libraries / Packages
+Install using:
+              pip install pandas numpy scikit-learn streamlit folium earthengine-api streamlit-folium
+
+Important libraries:
+                    pandas → data handling
+                    numpy → numerical operations
+                    scikit-learn → machine learning (Random Forest)
+                    streamlit → dashboard
+                    folium → maps
+                    earthengine-api → Google Earth Engine connection
+                    streamlit-folium → display maps in dashboard
+
+4. Google Earth Engine (GEE)
+
+Used for:
+         Satellite data access
+         NDVI & NDBI extraction
+
+5. Web Browser
+Google Chrome (recommended)
+
+Used to:
+        View Streamlit dashboard
+
+6. Command Line Tool
+Command Prompt / Terminal
+
+Used to run:
+           streamlit run app.py

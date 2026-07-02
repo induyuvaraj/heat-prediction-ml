@@ -1,0 +1,96 @@
+1. PROJECT OVERVIEW
+
+This project analyzes and predicts urban heat at a hyperlocal level using satellite data and machine learning.
+
+The system uses Google Earth Engine (GEE) to extract environmental features such as NDVI (vegetation index) and NDBI (built-up index). These features are used to train a Random Forest model for temperature prediction.
+
+The output is visualized through a Streamlit dashboard, which displays heatmaps, predicted temperature, and alert messages.
+
+
+
+2. PREREQUISITES
+
+ Python 3.x installed
+ Internet connection
+ Google account (for GEE access)
+
+
+
+3. GOOGLE EARTH ENGINE (GEE) SETUP
+
+Step 1: Create GEE Account
+
+* Go to: https://earthengine.google.com
+* Sign in with your Google account
+* Request access and wait for approval
+
+Step 2: Create Cloud Project
+
+* Go to Google Cloud Console
+* Create a new project (example: "urbanheatmapping")
+* Enable Earth Engine API for the project
+
+Step 3: Initialize GEE in Python
+
+* Install Earth Engine API:
+  pip install earthengine-api
+
+* In your project code:
+  import ee
+  ee.Authenticate()
+  ee.Initialize(project='your-project-id')
+
+4. DATA COLLECTION
+
+* Satellite data is collected using Google Earth Engine
+* NDVI (vegetation index) extracted using Sentinel-2 data
+* NDBI (built-up index) extracted using satellite bands
+* Temperature data collected and stored in CSV format
+* Final dataset includes:
+  Latitude, Longitude, NDVI, NDBI, Year, Time, Temperature
+
+5. MACHINE LEARNING MODEL
+
+* Algorithm used: Random Forest Regressor
+
+* Input Features:
+  Latitude, Longitude, NDVI, NDBI, Year, Time
+
+* Output:
+  Predicted Temperature
+
+* Model Evaluation:
+  MAE (Mean Absolute Error)
+  R² Score
+
+6. INSTALL REQUIRED LIBRARIES
+
+Run the following command:
+
+pip install pandas numpy scikit-learn streamlit folium earthengine-api streamlit-folium
+
+8. RUNNING THE PROJECT
+
+Step 1: Open terminal / command prompt
+
+Step 2: Navigate to Source_Code folder
+
+Step 3: Run the application:
+streamlit run app.py
+
+Step 4: The dashboard will open in your browser
+
+9. INPUT PARAMETERS
+
+* Latitude
+* Longitude
+* Date
+* Time (Morning / Afternoon / Evening)
+
+10. OUTPUT
+
+* Heatmap visualization
+* Predicted temperature
+* Vulnerability score
+* Risk level (Low / Moderate / High)
+* Alert message

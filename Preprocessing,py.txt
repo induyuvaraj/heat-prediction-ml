@@ -1,0 +1,12 @@
+import pandas as pd
+
+# Load your dataset
+df = pd.read_csv("temperature_data.csv")
+
+# Remove duplicate rows
+df = df.drop_duplicates()
+
+# Save cleaned dataset
+df.to_csv("temperature_data_no_duplicates.csv", index=False)
+
+print("Duplicates removed successfully ✅")
